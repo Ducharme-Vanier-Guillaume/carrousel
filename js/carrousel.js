@@ -15,7 +15,7 @@
 
     let carrousel__form = document.querySelector('.carrousel__form');
 
-
+// Boucle pour carrousel 
     for (const elm of galerie__img){
 
         let carrousel__img = document.createElement('img')
@@ -34,27 +34,32 @@
         radioBtn.value = i;
         radioBtn.id = 'carrousel-radio-' + i;
 
-        // Ajoutez un écouteur d'événements pour détecter les changements de sélection
+        // Ajoute un écouteur d'événements pour détecter les changements de sélection
         radioBtn.addEventListener('change', function() {
             if (this.checked) {
-                // Mettez en avant l'image correspondante en ajustant le z-index
+                // Met en avant l'image correspondante en ajustant le z-index
                 let index = parseInt(this.value);
                 for (let j = 0; j < carrousel__figure.children.length; j++) {
                     if (j === index) {
-                        carrousel__figure.children[j].style.zIndex = 1; // Mettez en avant l'image sélectionnée
+                        carrousel__figure.children[j].style.zIndex = 1; // Met en avant l'image sélectionnée
                     } else {
-                        carrousel__figure.children[j].style.zIndex = 0; // Cachez les autres images
+                        carrousel__figure.children[j].style.zIndex = 0; // Cache les autres images
                     }
                 }
             }
         });
 
-        // Ajoutez le bouton radio au formulaire du carrousel
         carrousel__form.appendChild(radioBtn);
     }
 
-        // Assurez-vous que le premier bouton radio est coché par défaut
-        carrousel__form.firstChild.checked = true;
+    // Permet que le premier bouton radio est coché par défaut
+    carrousel__form.firstChild.checked = true;
+
+    // met en avant la première image du carrousel
+    carrousel__figure.children[0].style.zIndex = 1;
+
+    // Assure que le premier bouton radio est coché par défaut
+    carrousel__form.firstChild.checked = true;
 
     bouton.addEventListener('mousedown', function(){
         carrousel.classList.add('carrousel--ouvrir')
