@@ -44,10 +44,6 @@
   height: 100%;
 }
 
-.wp-block-gallery.has-nested-images {
-  display: none;
-}
-
 [type=radio] {
   scale: 150%;
   margin: 0.5%;
