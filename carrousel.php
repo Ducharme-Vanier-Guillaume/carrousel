@@ -25,6 +25,12 @@ true);
 
 add_action('wp_enqueue_scripts', 'eddym_enqueue');
 
+// dans header.php
+// // wp_header() juste avant la balise fermeture ­</head>
+
+// dans footer.php
+// wp_footer() juste avant la balise fermeture </footer>
+
 function genere_html(){
     /////////////////////////////////////// HTML
     // Le conteneur d'une boîte
@@ -34,7 +40,10 @@ function genere_html(){
        <button class="carrousel__x">X</button>
        <figure class="carrousel__figure"></figure>
        <form class="carrousel__form"></form>
-       </div>';
+       <a class="revenirtBtn" onclick="plusSlides(-1)">&#10094;</a>
+       <a class="suivantBtn" onclick="plusSlides(1)">&#10095;</a>
+       </div>
+       ';
        return $contenu;
    }
 add_shortcode('carrousel', 'genere_html');
