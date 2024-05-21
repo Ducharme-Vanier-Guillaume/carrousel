@@ -1,5 +1,5 @@
 .carrousel{
-    position: absolute;
+    position: fixed;
     width: 50%;
     height: 65%;
     top: 13%;
@@ -10,6 +10,10 @@
     transition: transform .25s;
     z-index: 1;
    
+}
+
+.no-scroll {
+    overflow: hidden;
 }
 
 .carrousel__x{
@@ -46,8 +50,12 @@ object-fit: cover;
     height: 100%;
 }
 
+.galerie > h4{
+    color: var(--couleur2);
+}
+
 .wp-block-gallery.has-nested-images{
-    display: none;
+
 }
 
 [type="radio"]{
@@ -78,5 +86,13 @@ object-fit: cover;
 
 .revenirtBtn:hover, .suivantBtn:hover{
     background-color: rgba(0,0,0,0.8);
+}
+
+.wp-block-image {
+    transition: transform 0.3s ease; /* Ajoute une transition fluide */
+}
+
+.wp-block-image:hover {
+    transform: scale(0.9); /* Réduit l'échelle de l'image au survol */
 }
 

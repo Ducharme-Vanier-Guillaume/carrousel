@@ -104,4 +104,47 @@
         carrousel__form.querySelector('#carrousel-radio-' + newIndex).checked = true;
     });
 
+    // Gestion de l'ouverture du carrousel en cliquant sur une image de la galerie
+    galerie__img.forEach(function(image, index) {
+        image.addEventListener('click', function() {
+            // Ouvre le carrousel
+            carrousel.classList.add('carrousel--ouvrir');
+            // Change l'image affichée dans le carrousel en fonction de l'index de l'image cliquée
+            changeZIndex(index);
+            // Coche le bouton radio correspondant à l'image cliquée
+            carrousel__form.querySelector('#carrousel-radio-' + index).checked = true;
+        });
+    });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Votre deuxième bloc de code JavaScript ici
+    let bouton = document.querySelector('.bouton__ouvrir');
+    let carrousel = document.querySelector('.carrousel');
+    let carrousel__x = document.querySelector('.carrousel__x');
+    let carrousel__form = document.querySelector('.carrousel__form');
+    let galerie__img = document.querySelectorAll('.wp-block-image');
+
+    bouton.addEventListener('mousedown', function(){
+        carrousel.classList.add('carrousel--ouvrir');
+        document.body.classList.add('no-scroll'); // Ajoute la classe no-scroll au body pour désactiver le défilement de la page
+    });
+
+    carrousel__x.addEventListener('mousedown', function(){
+        carrousel.classList.remove('carrousel--ouvrir');
+        document.body.classList.remove('no-scroll'); // Retire la classe no-scroll du body pour réactiver le défilement de la page
+    });
+
+    for (let i = 0; i < galerie__img.length; i++) {
+        galerie__img[i].addEventListener('click', function() {
+            // Ouvre le carrousel
+            carrousel.classList.add('carrousel--ouvrir');
+            // Change l'image affichée dans le carrousel en fonction de l'index de l'image cliquée
+            changeZIndex(i);
+            // Coche le bouton radio correspondant à l'image cliquée
+            carrousel__form.querySelector('#carrousel-radio-' + i).checked = true;
+            document.body.classList.add('no-scroll'); // Ajoute la classe no-scroll au body pour désactiver le défilement de la page
+        });
+    }
+})
 })();
