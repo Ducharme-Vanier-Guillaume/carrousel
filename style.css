@@ -89,4 +89,8 @@
 
 .wp-block-image:hover {
   transform: scale(0.9); /* Réduit l'échelle de l'image au survol */
+}
+
+.bouton__ouvrir {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
