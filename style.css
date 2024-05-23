@@ -5,7 +5,7 @@
   height: 65%;
   top: 13%;
   left: 25%;
-  border: 3px solid black;
+  border: 3px solid var(--couleur2);
   background-color: orange;
   transform: scale(0);
   transition: transform 0.25s;
