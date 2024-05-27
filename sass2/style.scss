@@ -1,15 +1,23 @@
 .carrousel{
     position: fixed;
-    width: 50%;
-    height: 65%;
-    top: 13%;
-    left: 25%;
+   
+    width: 70%;
+    height: 30%;
+    top: 32%;
+    left: 16%;
     border: 3px solid var(--couleur2);
     background-color: orange;
     transform: scale(0);
     transition: transform .25s;
     z-index: 1;
-   
+
+    @media screen and (min-width:700px) {
+        width: 50%;
+        height: 65%;
+        top: 13%;
+        left: 25%;
+          }
+
 }
 
 .no-scroll {
@@ -59,8 +67,13 @@ object-fit: cover;
 }
 
 [type="radio"]{
+margin: 1.5%;
     scale: 150%;
-    margin: .5%;
+    @media screen and (min-width:700px) {
+        margin: .5%;
+          }
+
+
 }
 
 .revenirtBtn,
