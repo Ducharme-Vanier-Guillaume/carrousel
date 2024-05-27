@@ -1,0 +1,102 @@
+.carrousel{
+    position: fixed;
+    width: 50%;
+    height: 65%;
+    top: 13%;
+    left: 25%;
+    border: 3px solid var(--couleur2);
+    background-color: orange;
+    transform: scale(0);
+    transition: transform .25s;
+    z-index: 1;
+   
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.carrousel__x{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 3px 6px;
+     font-family: 'Times New Roman', Times, serif;
+     font-weight: bold;
+     z-index: 2;
+}
+
+.carrousel--ouvrir{
+    transform: scale(1);
+}
+
+.carrousel__figure{
+width: 100%;
+height: 100%;
+}
+
+.carrousel__img{
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+object-fit: cover;
+
+}
+
+.galerie__img{
+    width: 100%;
+    height: 100%;
+}
+
+.galerie > h4{
+    color: var(--couleur2);
+}
+
+.wp-block-gallery.has-nested-images{
+
+}
+
+[type="radio"]{
+    scale: 150%;
+    margin: .5%;
+}
+
+.revenirtBtn,
+.suivantBtn{
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 10;
+}
+
+.suivantBtn{
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.revenirtBtn:hover, .suivantBtn:hover{
+    background-color: rgba(0,0,0,0.8);
+}
+
+.wp-block-image {
+    transition: transform 0.3s ease; /* Ajoute une transition fluide */
+}
+
+.wp-block-image:hover {
+    transform: scale(0.9); /* Réduit l'échelle de l'image au survol */
+}
+
+.bouton__ouvrir{
+    display: none;
+}
+
