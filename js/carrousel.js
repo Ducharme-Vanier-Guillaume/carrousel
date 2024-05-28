@@ -1,3 +1,7 @@
+// Pour pouvoir animer le carrousel afin de pouvoir ouvrir lorsque l'on click sur une photo
+// On veut que celui affiche l'image choisie et que l'on puisse se déplacer d'image en image
+// Avec des boutons flèches ou radio. Tout en empechant le scroll de la page
+
 (function(){
     console.log('début')
     let carrousel = document.querySelector(".carrousel")

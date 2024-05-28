@@ -1,7 +1,9 @@
-  # Labo5
+# Carrousel
 
 ## Objectifs
-  Ajouter gallerie sur les éléments populaire qui s'ouvre à l'aide d'un plugin créée
+  Créer une galerie afin de pouvoir avoir un carrousel animé afin de pouvoir ouvrir lorsque l'on click sur une photo
+  On veut que celui affiche l'image choisie et que l'on puisse se déplacer d'image en image
+   Avec des boutons flèches ou radio. Tout en empechant le scroll de la page
 
 ### Auteur
 Guillaume Ducharme-Vanier
@@ -11,9 +13,8 @@ Groupe 2
 
 #### Description du projet : 
 J'ai inséré un carrousel qui peux changer d'image grace aux boutons radio et les boutons flèches
-dans l'image. Sur la page github, cette fonction est disponible sur tous les éléments populaire
-et sur la page whc, cette fonction n'est que possible avec l'article : Arosa, Suisse qui se trouve
-dans la section populaire
+dans l'image. On retrouve une gallerie dans le front-page, mais aussi sur tous les éléments populaire.
+L'utilisation du restAPI, pour afficher les images en directs est utilisé.
 
 
 #### : Liens URL

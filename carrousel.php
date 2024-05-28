@@ -25,11 +25,6 @@ true);
 
 add_action('wp_enqueue_scripts', 'eddym_enqueue');
 
-// dans header.php
-// // wp_header() juste avant la balise fermeture ­</head>
-
-// dans footer.php
-// wp_footer() juste avant la balise fermeture </footer>
 
 function genere_html(){
     /////////////////////////////////////// HTML
